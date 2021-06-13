@@ -1,8 +1,8 @@
 package common
 
 import (
-	"github.com/thonsun/puppy-hids/web/common/log"
-	"github.com/thonsun/puppy-hids/web/models"
+	"puppy-hids/web/common/log"
+	"puppy-hids/web/models"
 	"crypto/md5"
 	"fmt"
 	"gopkg.in/mgo.v2"
@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	MONGODB_HOME string = "192.168.8.114:27017"
+	MONGODB_HOME string = "192.168.3.83:27017"
 )
 
 var (
@@ -35,11 +35,14 @@ type Server struct {
 
 func init() {
 	//TODO: 环境变量设置mongodb
+	fmt.Println("zhao common-----------")
 	mongodb_addr := os.Getenv("MONGODB")
+	fmt.Println(mongodb_addr)
 	DB,err = models.Conn(mongodb_addr,"agent")
 	if err != nil {
 		log.Debug("connect mongodb error:%v",err)
 	}
+	fmt.Println("zhao common 3333-----------")
 }
 
 // 告警结构体

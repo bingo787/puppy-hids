@@ -3,7 +3,7 @@ package main
 import "gopkg.in/mgo.v2"
 
 const (
-	mongohome string = "192.168.8.114:27017"
+	mongodeploy string = "172.40.219.253:27017"
 	db = "agent"
 )
 

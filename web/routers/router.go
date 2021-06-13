@@ -1,9 +1,9 @@
 package routers
 
 import (
-	"github.com/thonsun/puppy-hids/web/common"
-	"github.com/thonsun/puppy-hids/web/common/log"
-	"github.com/thonsun/puppy-hids/web/setting"
+	"puppy-hids/web/common"
+	"puppy-hids/web/common/log"
+	"puppy-hids/web/setting"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"gopkg.in/mgo.v2/bson"
@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	HOME string = "192.168.8.243:33433"
+	HOME string = "192.168.3.243:33433"
 )
 
 func InitRouter() *gin.Engine {

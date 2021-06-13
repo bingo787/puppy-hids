@@ -1,17 +1,20 @@
 package main
 
+
 import (
-	"github.com/thonsun/puppy-hids/web/common/log"
-	"github.com/thonsun/puppy-hids/web/routers"
-	"github.com/thonsun/puppy-hids/web/setting"
+	"puppy-hids/web/common/log"
+	"puppy-hids/web/routers"
+	"puppy-hids/web/setting"
 	"fmt"
 	"net/http"
 )
 
 func main() {
+	fmt.Println("11111")
 	log.SetLogLevel(log.DEBUG)
 	router := routers.InitRouter()
 
+	fmt.Println("2222")
 	s := &http.Server{
 		Addr:           fmt.Sprintf(":%d", setting.HTTPPort),
 		Handler:        router,
@@ -20,5 +23,6 @@ func main() {
 		MaxHeaderBytes: 1 << 20,
 	}
 
+	fmt.Println("333")
 	s.ListenAndServe()
 }

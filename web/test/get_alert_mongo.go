@@ -4,8 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"time"
-
-	"github.com/willf/bitset"
+	"github.com/bits-and-blooms/bitset"
 )
 
 type Notice struct {
